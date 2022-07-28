@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 5.0.1 (Python 3.10.5 on win32)" generated="20220728 20:52:46.902" rpa="false" schemaversion="3">
+<suite id="s1" name="Test" source="C:\Treinamento_Robot\sankhya_treinamento_robot_framework\test">
+<suite id="s1-s1" name="Variaveis" source="C:\Treinamento_Robot\sankhya_treinamento_robot_framework\test\variaveis.robot">
+<test id="s1-s1-t1" name="Exercicio 1 - Imprimir dicionario com dados pessoais" line="5">
+<kw name="Tenho um dicionario com dados pessoais e imprimo eles." library="resource">
+<kw name="Log To Console" library="BuiltIn">
+<arg>\n 1ª informação ${exercicio1.nome}</arg>
+<arg>\n</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20220728 20:52:46.938" endtime="20220728 20:52:46.939"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>\n 2ª informação ${exercicio1.nome_do_meio}</arg>
+<arg>\n</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20220728 20:52:46.940" endtime="20220728 20:52:46.941"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>\n 3ª informação ${exercicio1.sobrenome}</arg>
+<arg>\n</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20220728 20:52:46.941" endtime="20220728 20:52:46.942"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>\n 4ª informação ${exercicio1.idade}</arg>
+<arg>\n</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20220728 20:52:46.942" endtime="20220728 20:52:46.943"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>\n 5ª informação ${exercicio1.cpf}</arg>
+<arg>\n</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20220728 20:52:46.943" endtime="20220728 20:52:46.944"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>\n 6ª informação ${exercicio1.email}</arg>
+<arg>\n</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20220728 20:52:46.944" endtime="20220728 20:52:46.945"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>\n Completo ${exercicio1}</arg>
+<arg>\n</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20220728 20:52:46.945" endtime="20220728 20:52:46.946"/>
+</kw>
+<status status="PASS" starttime="20220728 20:52:46.938" endtime="20220728 20:52:46.946"/>
+</kw>
+<doc>Teste para imprimir um dicionario com dados pessoais</doc>
+<tag>dicionarios</tag>
+<status status="PASS" starttime="20220728 20:52:46.937" endtime="20220728 20:52:46.946"/>
+</test>
+<test id="s1-s1-t2" name="Exercicio 2 - Imprimir minha lista de Frutas" line="10">
+<kw name="Tenho uma Lista de Frutas e imprimo ela." library="resource">
+<kw name="Log To Console" library="BuiltIn">
+<arg>\n 1ª Fruta ${exercicio2}[0]</arg>
+<arg>\n</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20220728 20:52:46.947" endtime="20220728 20:52:46.948"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>\n 2ª Fruta ${exercicio2}[1]</arg>
+<arg>\n</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20220728 20:52:46.948" endtime="20220728 20:52:46.948"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>\n 3ª Fruta ${exercicio2}[2]</arg>
+<arg>\n</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20220728 20:52:46.949" endtime="20220728 20:52:46.949"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>\n 4ª Fruta ${exercicio2}[3]</arg>
+<arg>\n</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20220728 20:52:46.949" endtime="20220728 20:52:46.949"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>\n 5ª Fruta ${exercicio2}[4]</arg>
+<arg>\n</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20220728 20:52:46.950" endtime="20220728 20:52:46.950"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>\n Todas as Frutas ${exercicio2}</arg>
+<arg>\n</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20220728 20:52:46.950" endtime="20220728 20:52:46.951"/>
+</kw>
+<status status="PASS" starttime="20220728 20:52:46.947" endtime="20220728 20:52:46.951"/>
+</kw>
+<doc>Teste para imprimir uma lista de frutas</doc>
+<tag>lista</tag>
+<status status="PASS" starttime="20220728 20:52:46.947" endtime="20220728 20:52:46.951"/>
+</test>
+<status status="PASS" starttime="20220728 20:52:46.925" endtime="20220728 20:52:46.952"/>
+</suite>
+<status status="PASS" starttime="20220728 20:52:46.904" endtime="20220728 20:52:46.954"/>
+</suite>
+<statistics>
+<total>
+<stat pass="2" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="1" fail="0" skip="0">dicionarios</stat>
+<stat pass="1" fail="0" skip="0">lista</stat>
+</tag>
+<suite>
+<stat pass="2" fail="0" skip="0" id="s1" name="Test">Test</stat>
+<stat pass="2" fail="0" skip="0" id="s1-s1" name="Variaveis">Test.Variaveis</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
