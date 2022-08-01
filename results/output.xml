@@ -1,0 +1,291 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 5.0.1 (Python 3.10.5 on win32)" generated="20220729 20:28:11.629" rpa="false" schemaversion="3">
+<suite id="s1" name="Sankhya Treinamento Robot Framework" source="C:\Treinamento_Robot\sankhya_treinamento_robot_framework">
+<suite id="s1-s1" name="Test" source="C:\Treinamento_Robot\sankhya_treinamento_robot_framework\test">
+<suite id="s1-s1-s1" name="If" source="C:\Treinamento_Robot\sankhya_treinamento_robot_framework\test\if.robot">
+<test id="s1-s1-s1-t1" name="imprimir com condição" line="6">
+<kw name="imprimir com condição" library="resource_if">
+<for flavor="IN RANGE">
+<var>${numero}</var>
+<value>0</value>
+<value>11</value>
+<iter>
+<var name="${numero}">0</var>
+<if>
+<branch type="IF" condition="${numero} == 5">
+<kw name="Log To Console" library="BuiltIn">
+<arg>\nEstou no numero: ${numero}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="NOT RUN" starttime="20220729 20:28:11.674" endtime="20220729 20:28:11.674"/>
+</kw>
+<status status="NOT RUN" starttime="20220729 20:28:11.673" endtime="20220729 20:28:11.674"/>
+</branch>
+<branch type="ELSE IF" condition="${numero} == 8">
+<kw name="Log To Console" library="BuiltIn">
+<arg>\nEstou no numero: ${numero}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="NOT RUN" starttime="20220729 20:28:11.674" endtime="20220729 20:28:11.674"/>
+</kw>
+<status status="NOT RUN" starttime="20220729 20:28:11.674" endtime="20220729 20:28:11.675"/>
+</branch>
+<status status="PASS" starttime="20220729 20:28:11.673" endtime="20220729 20:28:11.675"/>
+</if>
+<status status="PASS" starttime="20220729 20:28:11.673" endtime="20220729 20:28:11.675"/>
+</iter>
+<iter>
+<var name="${numero}">1</var>
+<if>
+<branch type="IF" condition="${numero} == 5">
+<kw name="Log To Console" library="BuiltIn">
+<arg>\nEstou no numero: ${numero}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="NOT RUN" starttime="20220729 20:28:11.675" endtime="20220729 20:28:11.675"/>
+</kw>
+<status status="NOT RUN" starttime="20220729 20:28:11.675" endtime="20220729 20:28:11.676"/>
+</branch>
+<branch type="ELSE IF" condition="${numero} == 8">
+<kw name="Log To Console" library="BuiltIn">
+<arg>\nEstou no numero: ${numero}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="NOT RUN" starttime="20220729 20:28:11.676" endtime="20220729 20:28:11.676"/>
+</kw>
+<status status="NOT RUN" starttime="20220729 20:28:11.676" endtime="20220729 20:28:11.676"/>
+</branch>
+<status status="PASS" starttime="20220729 20:28:11.675" endtime="20220729 20:28:11.677"/>
+</if>
+<status status="PASS" starttime="20220729 20:28:11.675" endtime="20220729 20:28:11.677"/>
+</iter>
+<iter>
+<var name="${numero}">2</var>
+<if>
+<branch type="IF" condition="${numero} == 5">
+<kw name="Log To Console" library="BuiltIn">
+<arg>\nEstou no numero: ${numero}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="NOT RUN" starttime="20220729 20:28:11.678" endtime="20220729 20:28:11.678"/>
+</kw>
+<status status="NOT RUN" starttime="20220729 20:28:11.678" endtime="20220729 20:28:11.678"/>
+</branch>
+<branch type="ELSE IF" condition="${numero} == 8">
+<kw name="Log To Console" library="BuiltIn">
+<arg>\nEstou no numero: ${numero}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="NOT RUN" starttime="20220729 20:28:11.679" endtime="20220729 20:28:11.679"/>
+</kw>
+<status status="NOT RUN" starttime="20220729 20:28:11.679" endtime="20220729 20:28:11.680"/>
+</branch>
+<status status="PASS" starttime="20220729 20:28:11.678" endtime="20220729 20:28:11.680"/>
+</if>
+<status status="PASS" starttime="20220729 20:28:11.678" endtime="20220729 20:28:11.680"/>
+</iter>
+<iter>
+<var name="${numero}">3</var>
+<if>
+<branch type="IF" condition="${numero} == 5">
+<kw name="Log To Console" library="BuiltIn">
+<arg>\nEstou no numero: ${numero}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="NOT RUN" starttime="20220729 20:28:11.681" endtime="20220729 20:28:11.682"/>
+</kw>
+<status status="NOT RUN" starttime="20220729 20:28:11.681" endtime="20220729 20:28:11.682"/>
+</branch>
+<branch type="ELSE IF" condition="${numero} == 8">
+<kw name="Log To Console" library="BuiltIn">
+<arg>\nEstou no numero: ${numero}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="NOT RUN" starttime="20220729 20:28:11.682" endtime="20220729 20:28:11.682"/>
+</kw>
+<status status="NOT RUN" starttime="20220729 20:28:11.682" endtime="20220729 20:28:11.682"/>
+</branch>
+<status status="PASS" starttime="20220729 20:28:11.681" endtime="20220729 20:28:11.683"/>
+</if>
+<status status="PASS" starttime="20220729 20:28:11.680" endtime="20220729 20:28:11.683"/>
+</iter>
+<iter>
+<var name="${numero}">4</var>
+<if>
+<branch type="IF" condition="${numero} == 5">
+<kw name="Log To Console" library="BuiltIn">
+<arg>\nEstou no numero: ${numero}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="NOT RUN" starttime="20220729 20:28:11.683" endtime="20220729 20:28:11.684"/>
+</kw>
+<status status="NOT RUN" starttime="20220729 20:28:11.683" endtime="20220729 20:28:11.684"/>
+</branch>
+<branch type="ELSE IF" condition="${numero} == 8">
+<kw name="Log To Console" library="BuiltIn">
+<arg>\nEstou no numero: ${numero}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="NOT RUN" starttime="20220729 20:28:11.684" endtime="20220729 20:28:11.684"/>
+</kw>
+<status status="NOT RUN" starttime="20220729 20:28:11.684" endtime="20220729 20:28:11.685"/>
+</branch>
+<status status="PASS" starttime="20220729 20:28:11.683" endtime="20220729 20:28:11.685"/>
+</if>
+<status status="PASS" starttime="20220729 20:28:11.683" endtime="20220729 20:28:11.685"/>
+</iter>
+<iter>
+<var name="${numero}">5</var>
+<if>
+<branch type="IF" condition="${numero} == 5">
+<kw name="Log To Console" library="BuiltIn">
+<arg>\nEstou no numero: ${numero}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20220729 20:28:11.685" endtime="20220729 20:28:11.686"/>
+</kw>
+<status status="PASS" starttime="20220729 20:28:11.685" endtime="20220729 20:28:11.686"/>
+</branch>
+<branch type="ELSE IF" condition="${numero} == 8">
+<kw name="Log To Console" library="BuiltIn">
+<arg>\nEstou no numero: ${numero}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="NOT RUN" starttime="20220729 20:28:11.687" endtime="20220729 20:28:11.687"/>
+</kw>
+<status status="NOT RUN" starttime="20220729 20:28:11.687" endtime="20220729 20:28:11.687"/>
+</branch>
+<status status="PASS" starttime="20220729 20:28:11.685" endtime="20220729 20:28:11.688"/>
+</if>
+<status status="PASS" starttime="20220729 20:28:11.685" endtime="20220729 20:28:11.688"/>
+</iter>
+<iter>
+<var name="${numero}">6</var>
+<if>
+<branch type="IF" condition="${numero} == 5">
+<kw name="Log To Console" library="BuiltIn">
+<arg>\nEstou no numero: ${numero}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="NOT RUN" starttime="20220729 20:28:11.689" endtime="20220729 20:28:11.689"/>
+</kw>
+<status status="NOT RUN" starttime="20220729 20:28:11.688" endtime="20220729 20:28:11.689"/>
+</branch>
+<branch type="ELSE IF" condition="${numero} == 8">
+<kw name="Log To Console" library="BuiltIn">
+<arg>\nEstou no numero: ${numero}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="NOT RUN" starttime="20220729 20:28:11.690" endtime="20220729 20:28:11.690"/>
+</kw>
+<status status="NOT RUN" starttime="20220729 20:28:11.689" endtime="20220729 20:28:11.691"/>
+</branch>
+<status status="PASS" starttime="20220729 20:28:11.688" endtime="20220729 20:28:11.691"/>
+</if>
+<status status="PASS" starttime="20220729 20:28:11.688" endtime="20220729 20:28:11.691"/>
+</iter>
+<iter>
+<var name="${numero}">7</var>
+<if>
+<branch type="IF" condition="${numero} == 5">
+<kw name="Log To Console" library="BuiltIn">
+<arg>\nEstou no numero: ${numero}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="NOT RUN" starttime="20220729 20:28:11.692" endtime="20220729 20:28:11.692"/>
+</kw>
+<status status="NOT RUN" starttime="20220729 20:28:11.692" endtime="20220729 20:28:11.692"/>
+</branch>
+<branch type="ELSE IF" condition="${numero} == 8">
+<kw name="Log To Console" library="BuiltIn">
+<arg>\nEstou no numero: ${numero}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="NOT RUN" starttime="20220729 20:28:11.693" endtime="20220729 20:28:11.693"/>
+</kw>
+<status status="NOT RUN" starttime="20220729 20:28:11.693" endtime="20220729 20:28:11.693"/>
+</branch>
+<status status="PASS" starttime="20220729 20:28:11.692" endtime="20220729 20:28:11.693"/>
+</if>
+<status status="PASS" starttime="20220729 20:28:11.691" endtime="20220729 20:28:11.693"/>
+</iter>
+<iter>
+<var name="${numero}">8</var>
+<if>
+<branch type="IF" condition="${numero} == 5">
+<kw name="Log To Console" library="BuiltIn">
+<arg>\nEstou no numero: ${numero}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="NOT RUN" starttime="20220729 20:28:11.694" endtime="20220729 20:28:11.694"/>
+</kw>
+<status status="NOT RUN" starttime="20220729 20:28:11.694" endtime="20220729 20:28:11.694"/>
+</branch>
+<branch type="ELSE IF" condition="${numero} == 8">
+<kw name="Log To Console" library="BuiltIn">
+<arg>\nEstou no numero: ${numero}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20220729 20:28:11.694" endtime="20220729 20:28:11.695"/>
+</kw>
+<status status="PASS" starttime="20220729 20:28:11.694" endtime="20220729 20:28:11.695"/>
+</branch>
+<status status="PASS" starttime="20220729 20:28:11.693" endtime="20220729 20:28:11.695"/>
+</if>
+<status status="PASS" starttime="20220729 20:28:11.693" endtime="20220729 20:28:11.695"/>
+</iter>
+<iter>
+<var name="${numero}">9</var>
+<if>
+<branch type="IF" condition="${numero} == 5">
+<kw name="Log To Console" library="BuiltIn">
+<arg>\nEstou no numero: ${numero}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="NOT RUN" starttime="20220729 20:28:11.696" endtime="20220729 20:28:11.696"/>
+</kw>
+<status status="NOT RUN" starttime="20220729 20:28:11.696" endtime="20220729 20:28:11.696"/>
+</branch>
+<branch type="ELSE IF" condition="${numero} == 8">
+<kw name="Log To Console" library="BuiltIn">
+<arg>\nEstou no numero: ${numero}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="NOT RUN" starttime="20220729 20:28:11.697" endtime="20220729 20:28:11.698"/>
+</kw>
+<status status="NOT RUN" starttime="20220729 20:28:11.697" endtime="20220729 20:28:11.698"/>
+</branch>
+<status status="PASS" starttime="20220729 20:28:11.696" endtime="20220729 20:28:11.698"/>
+</if>
+<status status="PASS" starttime="20220729 20:28:11.696" endtime="20220729 20:28:11.698"/>
+</iter>
+<iter>
+<var name="${numero}">10</var>
+<if>
+<branch type="IF" condition="${numero} == 5">
+<kw name="Log To Console" library="BuiltIn">
+<arg>\nEstou no numero: ${numero}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="NOT RUN" starttime="20220729 20:28:11.699" endtime="20220729 20:28:11.699"/>
+</kw>
+<status status="NOT RUN" starttime="20220729 20:28:11.698" endtime="20220729 20:28:11.699"/>
+</branch>
+<branch type="ELSE IF" condition="${numero} == 8">
+<kw name="Log To Console" library="BuiltIn">
+<arg>\nEstou no numero: ${numero}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="NOT RUN" starttime="20220729 20:28:11.699" endtime="20220729 20:28:11.699"/>
+</kw>
+<status status="NOT RUN" starttime="20220729 20:28:11.699" endtime="20220729 20:28:11.699"/>
+</branch>
+<status status="PASS" starttime="20220729 20:28:11.698" endtime="20220729 20:28:11.700"/>
+</if>
+<status status="PASS" starttime="20220729 20:28:11.698" endtime="20220729 20:28:11.700"/>
+</iter>
+<status status="PASS" starttime="20220729 20:28:11.672" endtime="20220729 20:28:11.700"/>
+</for>
+<status status="PASS" starttime="20220729 20:28:11.672" endtime="20220729 20:28:11.700"/>
+</kw>
+<status status="PASS" starttime="20220729 20:28:11.671" endtime="20220729 20:28:11.700"/>
+</test>
+<status status="PASS" starttime="20220729 20:28:11.663" endtime="20220729 20:28:11.703"/>
+</suite>
+<status status="PASS" starttime="20220729 20:28:11.660" endtime="20220729 20:28:11.708"/>
+</suite>
+<status status="PASS" starttime="20220729 20:28:11.635" endtime="20220729 20:28:11.710"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Sankhya Treinamento Robot Framework">Sankhya Treinamento Robot Framework</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s1" name="Test">Sankhya Treinamento Robot Framework.Test</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s1-s1" name="If">Sankhya Treinamento Robot Framework.Test.If</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

@@ -1,104 +1,134 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 5.0.1 (Python 3.10.5 on win32)" generated="20220728 20:52:46.902" rpa="false" schemaversion="3">
+<robot generator="Robot 5.0.1 (Python 3.10.5 on win32)" generated="20220729 18:37:22.469" rpa="false" schemaversion="3">
 <suite id="s1" name="Test" source="C:\Treinamento_Robot\sankhya_treinamento_robot_framework\test">
 <suite id="s1-s1" name="Variaveis" source="C:\Treinamento_Robot\sankhya_treinamento_robot_framework\test\variaveis.robot">
 <test id="s1-s1-t1" name="Exercicio 1 - Imprimir dicionario com dados pessoais" line="5">
 <kw name="Tenho um dicionario com dados pessoais e imprimo eles." library="resource">
+<msg timestamp="20220729 18:37:22.504" level="TRACE">Arguments: [  ]</msg>
 <kw name="Log To Console" library="BuiltIn">
 <arg>\n 1ª informação ${exercicio1.nome}</arg>
 <arg>\n</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" starttime="20220728 20:52:46.938" endtime="20220728 20:52:46.939"/>
+<msg timestamp="20220729 18:37:22.505" level="TRACE">Arguments: [ '\n 1ª informação Bruno' | '\n' ]</msg>
+<msg timestamp="20220729 18:37:22.505" level="TRACE">Return: None</msg>
+<status status="PASS" starttime="20220729 18:37:22.504" endtime="20220729 18:37:22.505"/>
 </kw>
 <kw name="Log To Console" library="BuiltIn">
 <arg>\n 2ª informação ${exercicio1.nome_do_meio}</arg>
 <arg>\n</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" starttime="20220728 20:52:46.940" endtime="20220728 20:52:46.941"/>
+<msg timestamp="20220729 18:37:22.506" level="TRACE">Arguments: [ '\n 2ª informação Rodrigues' | '\n' ]</msg>
+<msg timestamp="20220729 18:37:22.506" level="TRACE">Return: None</msg>
+<status status="PASS" starttime="20220729 18:37:22.505" endtime="20220729 18:37:22.506"/>
 </kw>
 <kw name="Log To Console" library="BuiltIn">
 <arg>\n 3ª informação ${exercicio1.sobrenome}</arg>
 <arg>\n</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" starttime="20220728 20:52:46.941" endtime="20220728 20:52:46.942"/>
+<msg timestamp="20220729 18:37:22.507" level="TRACE">Arguments: [ '\n 3ª informação Cruz' | '\n' ]</msg>
+<msg timestamp="20220729 18:37:22.507" level="TRACE">Return: None</msg>
+<status status="PASS" starttime="20220729 18:37:22.506" endtime="20220729 18:37:22.507"/>
 </kw>
 <kw name="Log To Console" library="BuiltIn">
 <arg>\n 4ª informação ${exercicio1.idade}</arg>
 <arg>\n</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" starttime="20220728 20:52:46.942" endtime="20220728 20:52:46.943"/>
+<msg timestamp="20220729 18:37:22.508" level="TRACE">Arguments: [ '\n 4ª informação 25' | '\n' ]</msg>
+<msg timestamp="20220729 18:37:22.508" level="TRACE">Return: None</msg>
+<status status="PASS" starttime="20220729 18:37:22.507" endtime="20220729 18:37:22.509"/>
 </kw>
 <kw name="Log To Console" library="BuiltIn">
 <arg>\n 5ª informação ${exercicio1.cpf}</arg>
 <arg>\n</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" starttime="20220728 20:52:46.943" endtime="20220728 20:52:46.944"/>
+<msg timestamp="20220729 18:37:22.509" level="TRACE">Arguments: [ '\n 5ª informação 11111111111' | '\n' ]</msg>
+<msg timestamp="20220729 18:37:22.509" level="TRACE">Return: None</msg>
+<status status="PASS" starttime="20220729 18:37:22.509" endtime="20220729 18:37:22.509"/>
 </kw>
 <kw name="Log To Console" library="BuiltIn">
 <arg>\n 6ª informação ${exercicio1.email}</arg>
 <arg>\n</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" starttime="20220728 20:52:46.944" endtime="20220728 20:52:46.945"/>
+<msg timestamp="20220729 18:37:22.510" level="TRACE">Arguments: [ '\n 6ª informação brunorlcruz@hotmail.com' | '\n' ]</msg>
+<msg timestamp="20220729 18:37:22.510" level="TRACE">Return: None</msg>
+<status status="PASS" starttime="20220729 18:37:22.510" endtime="20220729 18:37:22.511"/>
 </kw>
 <kw name="Log To Console" library="BuiltIn">
 <arg>\n Completo ${exercicio1}</arg>
 <arg>\n</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" starttime="20220728 20:52:46.945" endtime="20220728 20:52:46.946"/>
+<msg timestamp="20220729 18:37:22.511" level="TRACE">Arguments: [ "\n Completo {'nome': 'Bruno', 'nome_do_meio': 'Rodrigues', 'sobrenome': 'Cruz', 'idade': '25', 'cpf': '11111111111', 'email': 'brunorlcruz@hotmail.com'}" | '\n' ]</msg>
+<msg timestamp="20220729 18:37:22.511" level="TRACE">Return: None</msg>
+<status status="PASS" starttime="20220729 18:37:22.511" endtime="20220729 18:37:22.511"/>
 </kw>
-<status status="PASS" starttime="20220728 20:52:46.938" endtime="20220728 20:52:46.946"/>
+<msg timestamp="20220729 18:37:22.511" level="TRACE">Return: None</msg>
+<status status="PASS" starttime="20220729 18:37:22.504" endtime="20220729 18:37:22.511"/>
 </kw>
 <doc>Teste para imprimir um dicionario com dados pessoais</doc>
 <tag>dicionarios</tag>
-<status status="PASS" starttime="20220728 20:52:46.937" endtime="20220728 20:52:46.946"/>
+<status status="PASS" starttime="20220729 18:37:22.503" endtime="20220729 18:37:22.512"/>
 </test>
 <test id="s1-s1-t2" name="Exercicio 2 - Imprimir minha lista de Frutas" line="10">
 <kw name="Tenho uma Lista de Frutas e imprimo ela." library="resource">
+<msg timestamp="20220729 18:37:22.513" level="TRACE">Arguments: [  ]</msg>
 <kw name="Log To Console" library="BuiltIn">
 <arg>\n 1ª Fruta ${exercicio2}[0]</arg>
 <arg>\n</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" starttime="20220728 20:52:46.947" endtime="20220728 20:52:46.948"/>
+<msg timestamp="20220729 18:37:22.513" level="TRACE">Arguments: [ '\n 1ª Fruta abacaxi' | '\n' ]</msg>
+<msg timestamp="20220729 18:37:22.514" level="TRACE">Return: None</msg>
+<status status="PASS" starttime="20220729 18:37:22.513" endtime="20220729 18:37:22.514"/>
 </kw>
 <kw name="Log To Console" library="BuiltIn">
 <arg>\n 2ª Fruta ${exercicio2}[1]</arg>
 <arg>\n</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" starttime="20220728 20:52:46.948" endtime="20220728 20:52:46.948"/>
+<msg timestamp="20220729 18:37:22.514" level="TRACE">Arguments: [ '\n 2ª Fruta maracuja' | '\n' ]</msg>
+<msg timestamp="20220729 18:37:22.515" level="TRACE">Return: None</msg>
+<status status="PASS" starttime="20220729 18:37:22.514" endtime="20220729 18:37:22.515"/>
 </kw>
 <kw name="Log To Console" library="BuiltIn">
 <arg>\n 3ª Fruta ${exercicio2}[2]</arg>
 <arg>\n</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" starttime="20220728 20:52:46.949" endtime="20220728 20:52:46.949"/>
+<msg timestamp="20220729 18:37:22.515" level="TRACE">Arguments: [ '\n 3ª Fruta morango' | '\n' ]</msg>
+<msg timestamp="20220729 18:37:22.515" level="TRACE">Return: None</msg>
+<status status="PASS" starttime="20220729 18:37:22.515" endtime="20220729 18:37:22.515"/>
 </kw>
 <kw name="Log To Console" library="BuiltIn">
 <arg>\n 4ª Fruta ${exercicio2}[3]</arg>
 <arg>\n</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" starttime="20220728 20:52:46.949" endtime="20220728 20:52:46.949"/>
+<msg timestamp="20220729 18:37:22.516" level="TRACE">Arguments: [ '\n 4ª Fruta banana' | '\n' ]</msg>
+<msg timestamp="20220729 18:37:22.516" level="TRACE">Return: None</msg>
+<status status="PASS" starttime="20220729 18:37:22.515" endtime="20220729 18:37:22.516"/>
 </kw>
 <kw name="Log To Console" library="BuiltIn">
 <arg>\n 5ª Fruta ${exercicio2}[4]</arg>
 <arg>\n</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" starttime="20220728 20:52:46.950" endtime="20220728 20:52:46.950"/>
+<msg timestamp="20220729 18:37:22.518" level="TRACE">Arguments: [ '\n 5ª Fruta abacate' | '\n' ]</msg>
+<msg timestamp="20220729 18:37:22.518" level="TRACE">Return: None</msg>
+<status status="PASS" starttime="20220729 18:37:22.517" endtime="20220729 18:37:22.518"/>
 </kw>
 <kw name="Log To Console" library="BuiltIn">
 <arg>\n Todas as Frutas ${exercicio2}</arg>
 <arg>\n</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" starttime="20220728 20:52:46.950" endtime="20220728 20:52:46.951"/>
+<msg timestamp="20220729 18:37:22.519" level="TRACE">Arguments: [ "\n Todas as Frutas ['abacaxi', 'maracuja', 'morango', 'banana', 'abacate']" | '\n' ]</msg>
+<msg timestamp="20220729 18:37:22.519" level="TRACE">Return: None</msg>
+<status status="PASS" starttime="20220729 18:37:22.519" endtime="20220729 18:37:22.519"/>
 </kw>
-<status status="PASS" starttime="20220728 20:52:46.947" endtime="20220728 20:52:46.951"/>
+<msg timestamp="20220729 18:37:22.519" level="TRACE">Return: None</msg>
+<status status="PASS" starttime="20220729 18:37:22.513" endtime="20220729 18:37:22.520"/>
 </kw>
 <doc>Teste para imprimir uma lista de frutas</doc>
 <tag>lista</tag>
-<status status="PASS" starttime="20220728 20:52:46.947" endtime="20220728 20:52:46.951"/>
+<status status="PASS" starttime="20220729 18:37:22.512" endtime="20220729 18:37:22.520"/>
 </test>
-<status status="PASS" starttime="20220728 20:52:46.925" endtime="20220728 20:52:46.952"/>
+<status status="PASS" starttime="20220729 18:37:22.492" endtime="20220729 18:37:22.521"/>
 </suite>
-<status status="PASS" starttime="20220728 20:52:46.904" endtime="20220728 20:52:46.954"/>
+<status status="PASS" starttime="20220729 18:37:22.470" endtime="20220729 18:37:22.523"/>
 </suite>
 <statistics>
 <total>
