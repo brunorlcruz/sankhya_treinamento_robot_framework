@@ -3,6 +3,7 @@ Library     BuiltIn
 
 
 *** Variables ***
+
 ${log}
 ${p1}  hello
 ${p2}  word
