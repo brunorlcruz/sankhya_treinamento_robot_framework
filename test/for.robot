@@ -5,7 +5,6 @@ Resource    ../resource/for/resource_for.resource
 Contando ate 9
     Contar de 0 a 9
 
-
 Lendo minha lista de frutas
     Percorrer uma lista
 

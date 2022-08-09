@@ -1,3 +1,6 @@
+*** Variables ***
+
+@{jogos}    COD    State of Decay    Zomboid    GTG    DayZ
 *** Keywords ***
 
 imprimir com condição
@@ -8,3 +11,11 @@ imprimir com condição
             Log To Console    \nEstou no numero: ${numero}
         END  
     END
+
+Imprimir item lista
+    FOR  ${jogo}  IN  @{jogos}
+       IF  "${jogo}" == "COD"
+            Log To Console    \n ${jogo}            
+        END    
+    END
+    

@@ -6,8 +6,8 @@
 *** Keywords ***
 
 Contar de 0 a 9
-    FOR  ${count}  IN RANGE  0  9
-        Log To Console    ${count}
+    FOR  ${count}  IN RANGE  0  10
+        Log To Console    \n${count}
     END
 
 Percorrer uma lista

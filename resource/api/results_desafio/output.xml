@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 5.0.1 (Python 3.10.5 on win32)" generated="20220808 20:38:00.045" rpa="false" schemaversion="3">
+<suite id="s1" name="desafio POST" source="C:\Treinamento_Robot\sankhya_treinamento_robot_framework\test\desafio_POST.robot">
+<test id="s1-t1" name="Cadastro um novo usuario de nome e sobrenome" line="7">
+<kw name="Dado que tenho os dados para efetuar o servico creat_user" library="desafio_POST">
+<msg timestamp="20220808 20:38:00.163" level="TRACE">Arguments: [  ]</msg>
+<kw name="Catenate" library="BuiltIn">
+<var>${end_point}</var>
+<arg>${url_base}${path_params}</arg>
+<doc>Catenates the given items together and returns the resulted string.</doc>
+<msg timestamp="20220808 20:38:00.163" level="TRACE">Arguments: [ 'https://gorest.co.in/public/v2/users' ]</msg>
+<msg timestamp="20220808 20:38:00.163" level="TRACE">Return: 'https://gorest.co.in/public/v2/users'</msg>
+<msg timestamp="20220808 20:38:00.164" level="INFO">${end_point} = https://gorest.co.in/public/v2/users</msg>
+<status status="PASS" starttime="20220808 20:38:00.163" endtime="20220808 20:38:00.164"/>
+</kw>
+<kw name="Create Session" library="RequestsLibrary">
+<arg>minhasessao</arg>
+<arg>url=${end_point}</arg>
+<arg>headers=${headers}</arg>
+<doc>Create Session: create a HTTP session to a server</doc>
+<msg timestamp="20220808 20:38:00.164" level="TRACE">Arguments: [ 'minhasessao' | url='https://gorest.co.in/public/v2/users' | headers={'Authorization': 'Bearer 9b9603e13d6901e4677300e20c0256e207d1d1d722bce106ec47754fb77293ea',
+ 'Content-Type': 'application/json'} ]</msg>
+<msg timestamp="20220808 20:38:00.164" level="INFO">Creating Session using : alias=minhasessao, url=https://gorest.co.in/public/v2/users, headers={'Content-Type': 'application/json', 'Authorization': 'Bearer 9b9603e13d6901e4677300e20c0256e207d1d1d722bce106ec47754fb77293ea'},                     cookies={}, auth=None, timeout=None, proxies=None, verify=False,                     debug=0 </msg>
+<msg timestamp="20220808 20:38:00.164" level="DEBUG">Creating session: minhasessao</msg>
+<msg timestamp="20220808 20:38:00.164" level="TRACE">Return: &lt;requests.sessions.Session object at 0x0000027CDE43C100&gt;</msg>
+<status status="PASS" starttime="20220808 20:38:00.164" endtime="20220808 20:38:00.165"/>
+</kw>
+<kw name="Get File" library="OperatingSystem">
+<var>${payload}</var>
+<arg>./resource/api/usuario.json</arg>
+<doc>Returns the contents of a specified file.</doc>
+<msg timestamp="20220808 20:38:00.165" level="TRACE">Arguments: [ './resource/api/usuario.json' ]</msg>
+<msg timestamp="20220808 20:38:00.165" level="INFO" html="true">Getting file '&lt;a href="file://C:\Treinamento_Robot\sankhya_treinamento_robot_framework\resource\api\usuario.json"&gt;C:\Treinamento_Robot\sankhya_treinamento_robot_framework\resource\api\usuario.json&lt;/a&gt;'.</msg>
+<msg timestamp="20220808 20:38:00.165" level="TRACE">Return: '{\n    "name": "Teste Cru9993",\n    "gender": "male",\n    "email": "teste123@119ce.com.br",\n    "status": "active"\n}'</msg>
+<msg timestamp="20220808 20:38:00.165" level="INFO">${payload} = {
+    "name": "Teste Cru9993",
+    "gender": "male",
+    "email": "teste123@119ce.com.br",
+    "status": "active"
+}</msg>
+<status status="PASS" starttime="20220808 20:38:00.165" endtime="20220808 20:38:00.165"/>
+</kw>
+<kw name="Set Test Variable" library="BuiltIn">
+<arg>${payload}</arg>
+<doc>Makes a variable available everywhere within the scope of the current test.</doc>
+<msg timestamp="20220808 20:38:00.165" level="TRACE">Arguments: [ '${payload}' ]</msg>
+<msg timestamp="20220808 20:38:00.166" level="INFO">${payload} = {
+    "name": "Teste Cru9993",
+    "gender": "male",
+    "email": "teste123@119ce.com.br",
+    "status": "active"
+}</msg>
+<msg timestamp="20220808 20:38:00.166" level="TRACE">Return: None</msg>
+<status status="PASS" starttime="20220808 20:38:00.165" endtime="20220808 20:38:00.166"/>
+</kw>
+<kw name="Set Test Variable" library="BuiltIn">
+<arg>&amp;{params}</arg>
+<doc>Makes a variable available everywhere within the scope of the current test.</doc>
+<msg timestamp="20220808 20:38:00.166" level="TRACE">Arguments: [ '&amp;{params}' ]</msg>
+<msg timestamp="20220808 20:38:00.166" level="INFO">&amp;{params} = { }</msg>
+<msg timestamp="20220808 20:38:00.166" level="TRACE">Return: None</msg>
+<status status="PASS" starttime="20220808 20:38:00.166" endtime="20220808 20:38:00.166"/>
+</kw>
+<kw name="Set Test Variable" library="BuiltIn">
+<arg>${end_point}</arg>
+<doc>Makes a variable available everywhere within the scope of the current test.</doc>
+<msg timestamp="20220808 20:38:00.166" level="TRACE">Arguments: [ '${end_point}' ]</msg>
+<msg timestamp="20220808 20:38:00.166" level="INFO">${end_point} = https://gorest.co.in/public/v2/users</msg>
+<msg timestamp="20220808 20:38:00.166" level="TRACE">Return: None</msg>
+<status status="PASS" starttime="20220808 20:38:00.166" endtime="20220808 20:38:00.166"/>
+</kw>
+<msg timestamp="20220808 20:38:00.167" level="TRACE">Return: None</msg>
+<status status="PASS" starttime="20220808 20:38:00.163" endtime="20220808 20:38:00.167"/>
+</kw>
+<kw name="Quando executo servico creat_user" library="desafio_POST">
+<msg timestamp="20220808 20:38:00.167" level="TRACE">Arguments: [  ]</msg>
+<kw name="POST On Session" library="RequestsLibrary">
+<var>${response}</var>
+<arg>minhasessao</arg>
+<arg>url=${end_point}</arg>
+<arg>data=${payload}</arg>
+<doc>Sends a POST request on a previously created HTTP Session.</doc>
+<msg timestamp="20220808 20:38:00.168" level="TRACE">Arguments: [ 'minhasessao' | url='https://gorest.co.in/public/v2/users' | data='{\n    "name": "Teste Cru9993",\n    "gender": "male",\n    "email": "teste123@119ce.com.br",\n    "status": "active"\n}' ]</msg>
+<msg timestamp="20220808 20:38:00.170" level="DEBUG">Starting new HTTPS connection (1): gorest.co.in:443</msg>
+<msg timestamp="20220808 20:38:01.445" level="DEBUG">https://gorest.co.in:443 "POST /public/v2/users HTTP/1.1" 201 None</msg>
+<msg timestamp="20220808 20:38:01.446" level="INFO">POST Request : url=https://gorest.co.in/public/v2/users 
+ path_url=/public/v2/users 
+ headers={'User-Agent': 'python-requests/2.28.1', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Type': 'application/json', 'Authorization': 'Bearer 9b9603e13d6901e4677300e20c0256e207d1d1d722bce106ec47754fb77293ea', 'Content-Length': '115'} 
+ body={
+    "name": "Teste Cru9993",
+    "gender": "male",
+    "email": "teste123@119ce.com.br",
+    "status": "active"
+} 
+ </msg>
+<msg timestamp="20220808 20:38:01.446" level="INFO">POST Response : url=https://gorest.co.in/public/v2/users 
+ status=201, reason=Created 
+ headers={'Date': 'Mon, 08 Aug 2022 23:38:01 GMT', 'Content-Type': 'application/json; charset=utf-8', 'Transfer-Encoding': 'chunked', 'Connection': 'keep-alive', 'X-Frame-Options': 'SAMEORIGIN', 'X-XSS-Protection': '0', 'X-Content-Type-Options': 'nosniff', 'X-Download-Options': 'noopen', 'X-Permitted-Cross-Domain-Policies': 'none', 'Referrer-Policy': 'strict-origin-when-cross-origin', 'X-RateLimit-Limit': '90', 'X-RateLimit-Remaining': '89', 'X-RateLimit-Reset': '1', 'Location': 'https://gorest.co.in/public/v2/users/4062', 'ETag': 'W/"ffbb89048f9bd1cee532f8d46e2e3c7e"', 'Cache-Control': 'max-age=0, private, must-revalidate', 'X-Request-Id': '04c9c87f-a537-4b2a-8c6c-0286dbb7e7e3', 'X-Runtime': '0.021378', 'Strict-Transport-Security': 'max-age=63072000; includeSubDomains', 'Vary': 'Origin', 'CF-Cache-Status': 'DYNAMIC', 'Expect-CT': 'max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"', 'Report-To': '{"endpoints":[{"url":"https:\\/\\/a.nel.cloudflare.com\\/report\\/v3?s=jQKy2oVUqDATrGxdIw35wN%2FOa7az%2FIiGq8QXe1l2%2Fkznea28oelsAv5LEZjIITniNYJL8f0AaeWKw2XolJtBXIrZ91j50PEyXkV0r%2BlnvrrWOrrKwbh2XnGmR6NB1FTMzASN0BL%2FbKYQQSA%3D"}],"group":"cf-nel","max_age":604800}', 'NEL': '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}', 'Server': 'cloudflare', 'CF-RAY': '737c1549dab257a3-IAD', 'alt-svc': 'h3=":443"; ma=86400, h3-29=":443"; ma=86400'} 
+ body={"id":4062,"name":"Teste Cru9993","email":"teste123@119ce.com.br","gender":"male","status":"active"} 
+ </msg>
+<msg timestamp="20220808 20:38:01.448" level="INFO">C:\Users\sankhya\AppData\Local\Programs\Python\Python310\lib\site-packages\urllib3\connectionpool.py:1045: InsecureRequestWarning: Unverified HTTPS request is being made to host 'gorest.co.in'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/1.26.x/advanced-usage.html#ssl-warnings
+  warnings.warn(</msg>
+<msg timestamp="20220808 20:38:01.450" level="TRACE">Return: &lt;Response [201]&gt;</msg>
+<msg timestamp="20220808 20:38:01.451" level="INFO">${response} = &lt;Response [201]&gt;</msg>
+<status status="PASS" starttime="20220808 20:38:00.167" endtime="20220808 20:38:01.451"/>
+</kw>
+<kw name="Set Test Variable" library="BuiltIn">
+<arg>${response}</arg>
+<doc>Makes a variable available everywhere within the scope of the current test.</doc>
+<msg timestamp="20220808 20:38:01.453" level="TRACE">Arguments: [ '${response}' ]</msg>
+<msg timestamp="20220808 20:38:01.455" level="INFO">${response} = &lt;Response [201]&gt;</msg>
+<msg timestamp="20220808 20:38:01.455" level="TRACE">Return: None</msg>
+<status status="PASS" starttime="20220808 20:38:01.452" endtime="20220808 20:38:01.455"/>
+</kw>
+<msg timestamp="20220808 20:38:01.455" level="TRACE">Return: None</msg>
+<status status="PASS" starttime="20220808 20:38:00.167" endtime="20220808 20:38:01.456"/>
+</kw>
+<status status="PASS" starttime="20220808 20:38:00.163" endtime="20220808 20:38:01.457"/>
+</test>
+<status status="PASS" starttime="20220808 20:38:00.045" endtime="20220808 20:38:01.460"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="desafio POST">desafio POST</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
