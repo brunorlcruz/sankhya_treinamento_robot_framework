@@ -1,150 +1,91 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 5.0.1 (Python 3.10.5 on win32)" generated="20220808 21:05:52.776" rpa="false" schemaversion="3">
+<robot generator="Robot 5.0.1 (Python 3.10.5 on win32)" generated="20220924 09:45:45.021" rpa="false" schemaversion="3">
 <suite id="s1" name="Sankhya Treinamento Robot Framework" source="C:\Treinamento_Robot\sankhya_treinamento_robot_framework">
 <suite id="s1-s1" name="Test" source="C:\Treinamento_Robot\sankhya_treinamento_robot_framework\test">
-<suite id="s1-s1-s1" name="desafio POST" source="C:\Treinamento_Robot\sankhya_treinamento_robot_framework\test\desafio_POST.robot">
-<test id="s1-s1-s1-t1" name="Cadastro um novo usuario de nome e sobrenome" line="8">
-<kw name="Dado que tenho os dados para efetuar o servico creat_user" library="desafio_POST">
+<suite id="s1-s1-s1" name="desafio GET" source="C:\Treinamento_Robot\sankhya_treinamento_robot_framework\test\desafio_GET.robot">
+<test id="s1-s1-s1-t1" name="Pegar todos os usuarios ja cadastrados e printar a qtd dos usuarios ja cadastrados" line="7">
+<kw name="Dado que tenho os dados para efetuar o servico list_all_users" library="desafio_GET">
 <kw name="Catenate" library="BuiltIn">
 <var>${end_point}</var>
 <arg>${url_base}${path_params}</arg>
 <doc>Catenates the given items together and returns the resulted string.</doc>
-<msg timestamp="20220808 21:05:52.934" level="INFO">${end_point} = https://gorest.co.in/public/v2/users</msg>
-<status status="PASS" starttime="20220808 21:05:52.934" endtime="20220808 21:05:52.935"/>
-</kw>
-<kw name="Create Session" library="RequestsLibrary">
-<arg>minhasessao</arg>
-<arg>url=${end_point}</arg>
-<arg>headers=${headers}</arg>
-<doc>Create Session: create a HTTP session to a server</doc>
-<msg timestamp="20220808 21:05:52.936" level="INFO">Creating Session using : alias=minhasessao, url=https://gorest.co.in/public/v2/users, headers={'Content-Type': 'application/json', 'Authorization': 'Bearer 9b9603e13d6901e4677300e20c0256e207d1d1d722bce106ec47754fb77293ea'},                     cookies={}, auth=None, timeout=None, proxies=None, verify=False,                     debug=0 </msg>
-<status status="PASS" starttime="20220808 21:05:52.936" endtime="20220808 21:05:52.938"/>
-</kw>
-<kw name="Get File" library="OperatingSystem">
-<var>${payload}</var>
-<arg>./resource/api/usuario.json</arg>
-<doc>Returns the contents of a specified file.</doc>
-<msg timestamp="20220808 21:05:52.938" level="INFO" html="true">Getting file '&lt;a href="file://C:\Treinamento_Robot\sankhya_treinamento_robot_framework\resource\api\usuario.json"&gt;C:\Treinamento_Robot\sankhya_treinamento_robot_framework\resource\api\usuario.json&lt;/a&gt;'.</msg>
-<msg timestamp="20220808 21:05:52.940" level="INFO">${payload} = {
-    "name": "Testretee93993",
-    "gender": "male",
-    "email": "tte43@1te19ce.br",
-    "status": "active"
-}</msg>
-<status status="PASS" starttime="20220808 21:05:52.938" endtime="20220808 21:05:52.941"/>
-</kw>
-<kw name="Set Test Variable" library="BuiltIn">
-<arg>${payload}</arg>
-<doc>Makes a variable available everywhere within the scope of the current test.</doc>
-<msg timestamp="20220808 21:05:52.941" level="INFO">${payload} = {
-    "name": "Testretee93993",
-    "gender": "male",
-    "email": "tte43@1te19ce.br",
-    "status": "active"
-}</msg>
-<status status="PASS" starttime="20220808 21:05:52.941" endtime="20220808 21:05:52.943"/>
+<msg timestamp="20220924 09:45:45.343" level="INFO">${end_point} = https://gorest.co.in/public/v2/users</msg>
+<status status="PASS" starttime="20220924 09:45:45.341" endtime="20220924 09:45:45.345"/>
 </kw>
 <kw name="Set Test Variable" library="BuiltIn">
 <arg>${end_point}</arg>
 <doc>Makes a variable available everywhere within the scope of the current test.</doc>
-<msg timestamp="20220808 21:05:52.944" level="INFO">${end_point} = https://gorest.co.in/public/v2/users</msg>
-<status status="PASS" starttime="20220808 21:05:52.943" endtime="20220808 21:05:52.945"/>
+<msg timestamp="20220924 09:45:45.347" level="INFO">${end_point} = https://gorest.co.in/public/v2/users</msg>
+<status status="PASS" starttime="20220924 09:45:45.346" endtime="20220924 09:45:45.349"/>
 </kw>
-<status status="PASS" starttime="20220808 21:05:52.933" endtime="20220808 21:05:52.945"/>
+<status status="PASS" starttime="20220924 09:45:45.340" endtime="20220924 09:45:45.349"/>
 </kw>
-<kw name="Quando executo servico creat_user" library="desafio_POST">
-<kw name="POST On Session" library="RequestsLibrary">
+<kw name="Quando executo servico list_all_users" library="desafio_GET">
+<kw name="GET" library="RequestsLibrary">
 <var>${response}</var>
-<arg>minhasessao</arg>
-<arg>url=${end_point}</arg>
-<arg>data=${payload}</arg>
-<doc>Sends a POST request on a previously created HTTP Session.</doc>
-<msg timestamp="20220808 21:06:36.297" level="INFO">POST Request : url=https://gorest.co.in/public/v2/users 
+<arg>${end_point}</arg>
+<doc>Sends a GET request.</doc>
+<msg timestamp="20220924 09:45:46.229" level="INFO">GET Request : url=https://gorest.co.in/public/v2/users 
  path_url=/public/v2/users 
- headers={'User-Agent': 'python-requests/2.28.1', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Type': 'application/json', 'Authorization': 'Bearer 9b9603e13d6901e4677300e20c0256e207d1d1d722bce106ec47754fb77293ea', 'Content-Length': '111'} 
- body={
-    "name": "Testretee93993",
-    "gender": "male",
-    "email": "tte43@1te19ce.br",
-    "status": "active"
-} 
+ headers={'User-Agent': 'python-requests/2.28.1', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive'} 
+ body=None 
  </msg>
-<msg timestamp="20220808 21:06:36.303" level="INFO">POST Response : url=https://gorest.co.in/public/v2/users 
- status=201, reason=Created 
- headers={'Date': 'Tue, 09 Aug 2022 00:06:36 GMT', 'Content-Type': 'application/json; charset=utf-8', 'Transfer-Encoding': 'chunked', 'Connection': 'keep-alive', 'X-Frame-Options': 'SAMEORIGIN', 'X-XSS-Protection': '0', 'X-Content-Type-Options': 'nosniff', 'X-Download-Options': 'noopen', 'X-Permitted-Cross-Domain-Policies': 'none', 'Referrer-Policy': 'strict-origin-when-cross-origin', 'X-RateLimit-Limit': '90', 'X-RateLimit-Remaining': '89', 'X-RateLimit-Reset': '1', 'Location': 'https://gorest.co.in/public/v2/users/4093', 'ETag': 'W/"d70ea0e4a68588ea60a9015764bebd70"', 'Cache-Control': 'max-age=0, private, must-revalidate', 'X-Request-Id': 'cf723f25-d6f3-4b9a-8d05-24d4fd9487b9', 'X-Runtime': '0.021015', 'Strict-Transport-Security': 'max-age=63072000; includeSubDomains', 'Vary': 'Origin', 'CF-Cache-Status': 'DYNAMIC', 'Expect-CT': 'max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"', 'Report-To': '{"endpoints":[{"url":"https:\\/\\/a.nel.cloudflare.com\\/report\\/v3?s=JmNfNhzcBd0OYzWHbzmfQgLcOn6tKKCU1H%2FfPv%2BJWYFIoYLsnCw3aVCBTkfobfxEA2xG%2BNUOyXKCQb5PDc0VUCK7dSW4zUYhf4JeikD3i%2F0SR5eX8TNn8PikX3q08kM%3D"}],"group":"cf-nel","max_age":604800}', 'NEL': '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}', 'Server': 'cloudflare', 'CF-RAY': '737c3f27bf401839-EWR', 'alt-svc': 'h3=":443"; ma=86400, h3-29=":443"; ma=86400'} 
- body={"id":4093,"name":"Testretee93993","email":"tte43@1te19ce.br","gender":"male","status":"active"} 
+<msg timestamp="20220924 09:45:46.231" level="INFO">GET Response : url=https://gorest.co.in/public/v2/users 
+ status=200, reason=OK 
+ headers={'Date': 'Sat, 24 Sep 2022 12:45:46 GMT', 'Content-Type': 'application/json; charset=utf-8', 'Transfer-Encoding': 'chunked', 'Connection': 'keep-alive', 'Cache-Control': 'max-age=0, private, must-revalidate', 'etag': 'W/"39fbfddf96f276f08f1e5e3ce4666f9f"', 'referrer-policy': 'strict-origin-when-cross-origin', 'vary': 'Origin', 'x-content-type-options': 'nosniff', 'x-download-options': 'noopen', 'x-frame-options': 'SAMEORIGIN', 'x-links-current': 'https://gorest.co.in/public/v2/users?page=1', 'x-links-next': 'https://gorest.co.in/public/v2/users?page=2', 'x-links-previous': '', 'x-pagination-limit': '10', 'x-pagination-page': '1', 'x-pagination-pages': '413', 'x-pagination-total': '4127', 'x-permitted-cross-domain-policies': 'none', 'x-request-id': '2c379a93-cd5d-4313-9a93-e5124255d250', 'x-runtime': '0.019543', 'x-xss-protection': '0', 'CF-Cache-Status': 'DYNAMIC', 'Report-To': '{"endpoints":[{"url":"https:\\/\\/a.nel.cloudflare.com\\/report\\/v3?s=u5pPMFMSaRTuk1F8539rvZa4wKmQVrjLCnB%2BNltMGrTGQ9UR26QEtLJqDuSvkiWZmAxo0XbsA3DZ0CRYaA90pUiJyQ9WVXNqZsi4I6sYxoL%2BRGW1BpNXJrsNQ3yNohfWgfS8BzhzaJkPPsQ%3D"}],"group":"cf-nel","max_age":604800}', 'NEL': '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}', 'Server': 'cloudflare', 'CF-RAY': '74fb9e7c686a8c18-EWR', 'Content-Encoding': 'gzip', 'alt-svc': 'h3=":443"; ma=86400, h3-29=":443"; ma=86400'} 
+ body=[{"id":4185,"name":"Shankar Sharma","email":"sharma_shankar@wunsch-krajcik.biz","gender":"female","status":"active"},{"id":4184,"name":"Dr. Nalini Mahajan","email":"nalini_dr_mahajan@wintheiser.org","gender":"female","status":"active"},{"id":4183,"name":"Pres. Shashikala Nehru","email":"pres_shashikala_nehru@mertz-cremin.com","gender":"male","status":"active"},{"id":4181,"name":"Deeptimayee Marar","email":"deeptimayee_marar@bashirian-koss.com","gender":"female","status":"active"},{"id":4180,"name":"Dr. Manjusha Gupta","email":"dr_gupta_manjusha@ferry-harber.info","gender":"female","status":"active"},{"id":4179,"name":"Devak Patil","email":"patil_devak@kuhn.net","gender":"female","status":"active"},{"id":4178,"name":"Gurdev Talwar","email":"talwar_gurdev@langosh.io","gender":"male","status":"active"},{"id":4177,"name":"Ms. Gautam Patil","email":"ms_gautam_patil@goldner-towne.name","gender":"female","status":"inactive"},{"id":4176,"name":"Divaakar Agarwal IV","email":"iv_agarwal_divaakar@mcclure.info","gender":"male","status":"active"},{"id":4175,"name":"Govinda Mukhopadhyay I","email":"govinda_i_mukhopadhyay@turcotte.io","gender":"male","status":"active"}] 
  </msg>
-<msg timestamp="20220808 21:06:36.310" level="INFO">C:\Users\sankhya\AppData\Local\Programs\Python\Python310\lib\site-packages\urllib3\connectionpool.py:1045: InsecureRequestWarning: Unverified HTTPS request is being made to host 'gorest.co.in'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/1.26.x/advanced-usage.html#ssl-warnings
-  warnings.warn(</msg>
-<msg timestamp="20220808 21:06:36.319" level="INFO">${response} = &lt;Response [201]&gt;</msg>
-<status status="PASS" starttime="20220808 21:05:52.946" endtime="20220808 21:06:36.328"/>
+<msg timestamp="20220924 09:45:46.233" level="INFO">${response} = &lt;Response [200]&gt;</msg>
+<status status="PASS" starttime="20220924 09:45:45.353" endtime="20220924 09:45:46.235"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${response.text}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20220924 09:45:46.236" endtime="20220924 09:45:46.240"/>
 </kw>
 <kw name="Set Test Variable" library="BuiltIn">
 <arg>${response}</arg>
 <doc>Makes a variable available everywhere within the scope of the current test.</doc>
-<msg timestamp="20220808 21:06:36.330" level="INFO">${response} = &lt;Response [201]&gt;</msg>
-<status status="PASS" starttime="20220808 21:06:36.328" endtime="20220808 21:06:36.334"/>
+<msg timestamp="20220924 09:45:46.241" level="INFO">${response} = &lt;Response [200]&gt;</msg>
+<status status="PASS" starttime="20220924 09:45:46.240" endtime="20220924 09:45:46.244"/>
 </kw>
-<status status="PASS" starttime="20220808 21:05:52.945" endtime="20220808 21:06:36.335"/>
+<status status="PASS" starttime="20220924 09:45:45.351" endtime="20220924 09:45:46.244"/>
 </kw>
-<kw name="Valido se o usuario foi criado utilizando a request de get_user" library="desafio_POST">
-<kw name="Set Variable" library="BuiltIn">
-<var>${id}</var>
-<arg>${response.json()}[id]</arg>
-<doc>Returns the given values which can then be assigned to a variables.</doc>
-<msg timestamp="20220808 21:06:36.340" level="INFO">${id} = 4093</msg>
-<status status="PASS" starttime="20220808 21:06:36.338" endtime="20220808 21:06:36.342"/>
-</kw>
-<kw name="GET" library="RequestsLibrary">
-<var>${response}</var>
-<arg>${url_base}${path_params}/${id}</arg>
-<doc>Sends a GET request.</doc>
-<msg timestamp="20220808 21:07:19.710" level="INFO">GET Request : url=https://gorest.co.in/public/v2/users/4093 
- path_url=/public/v2/users/4093 
- headers={'User-Agent': 'python-requests/2.28.1', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive'} 
- body=None 
- </msg>
-<msg timestamp="20220808 21:07:19.721" level="INFO">GET Response : url=https://gorest.co.in/public/v2/users/4093 
- status=404, reason=Not Found 
- headers={'Date': 'Tue, 09 Aug 2022 00:07:19 GMT', 'Content-Type': 'application/json; charset=utf-8', 'Transfer-Encoding': 'chunked', 'Connection': 'keep-alive', 'Vary': 'Accept-Encoding, Origin', 'X-Frame-Options': 'SAMEORIGIN', 'X-XSS-Protection': '0', 'X-Content-Type-Options': 'nosniff', 'X-Download-Options': 'noopen', 'X-Permitted-Cross-Domain-Policies': 'none', 'Referrer-Policy': 'strict-origin-when-cross-origin', 'Cache-Control': 'no-cache', 'X-Request-Id': '98b9e492-6224-4fbb-96ad-1c12f6f3c10d', 'X-Runtime': '0.003122', 'Strict-Transport-Security': 'max-age=63072000; includeSubDomains', 'Content-Encoding': 'gzip', 'CF-Cache-Status': 'DYNAMIC', 'Expect-CT': 'max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"', 'Report-To': '{"endpoints":[{"url":"https:\\/\\/a.nel.cloudflare.com\\/report\\/v3?s=v5Ksa8aXZxmktiics6xcyeMpbt%2B4rOgBhp2Nqsan%2BgA0WbFV4hHhEO80faza1Xe1B%2F6%2FI2%2BYVXbd3P3mFrarEzBtddYt7S63cc%2FnmnRbA4ZPxLuLyf7ewnklnv6awMo%3D"}],"group":"cf-nel","max_age":604800}', 'NEL': '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}', 'Server': 'cloudflare', 'CF-RAY': '737c40372d3c1927-EWR', 'alt-svc': 'h3=":443"; ma=86400, h3-29=":443"; ma=86400'} 
- body={"message":"Resource not found"} 
- </msg>
-<msg timestamp="20220808 21:07:19.725" level="FAIL">HTTPError: 404 Client Error: Not Found for url: https://gorest.co.in/public/v2/users/4093</msg>
-<status status="FAIL" starttime="20220808 21:06:36.343" endtime="20220808 21:07:19.729"/>
+<kw name="Entao valido o status code da request 200" library="desafio_GET" sourcename="Entao valido o status code da request ${status_code}">
+<kw name="Should Be Equal As Strings" library="BuiltIn">
+<arg>${status_code}</arg>
+<arg>${response.status_code}</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<msg timestamp="20220924 09:45:46.248" level="INFO">Argument types are:
+&lt;class 'str'&gt;
+&lt;class 'int'&gt;</msg>
+<status status="PASS" starttime="20220924 09:45:46.247" endtime="20220924 09:45:46.251"/>
 </kw>
 <kw name="Log To Console" library="BuiltIn">
-<arg>\n\n${response.text}\n\n</arg>
+<arg>\n\n\nO status code é:${response.status_code}\n\n</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="NOT RUN" starttime="20220808 21:07:19.729" endtime="20220808 21:07:19.731"/>
+<status status="PASS" starttime="20220924 09:45:46.251" endtime="20220924 09:45:46.254"/>
 </kw>
-<status status="FAIL" starttime="20220808 21:06:36.336" endtime="20220808 21:07:19.732"/>
+<status status="PASS" starttime="20220924 09:45:46.246" endtime="20220924 09:45:46.255"/>
 </kw>
-<status status="FAIL" starttime="20220808 21:05:52.932" endtime="20220808 21:07:19.734">HTTPError: 404 Client Error: Not Found for url: https://gorest.co.in/public/v2/users/4093</status>
+<status status="PASS" starttime="20220924 09:45:45.337" endtime="20220924 09:45:46.255"/>
 </test>
-<kw name="Deletar Usuario Criado" library="desafio_POST" type="TEARDOWN">
-<kw name="Log To Console" library="BuiltIn">
-<arg>Teste</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="PASS" starttime="20220808 21:07:19.740" endtime="20220808 21:07:19.741"/>
-</kw>
-<status status="PASS" starttime="20220808 21:07:19.738" endtime="20220808 21:07:19.741"/>
-</kw>
-<status status="FAIL" starttime="20220808 21:05:52.810" endtime="20220808 21:07:19.741"/>
+<status status="PASS" starttime="20220924 09:45:45.095" endtime="20220924 09:45:46.258"/>
 </suite>
-<status status="FAIL" starttime="20220808 21:05:52.807" endtime="20220808 21:07:19.745"/>
+<status status="PASS" starttime="20220924 09:45:45.088" endtime="20220924 09:45:46.262"/>
 </suite>
-<status status="FAIL" starttime="20220808 21:05:52.780" endtime="20220808 21:07:19.747"/>
+<status status="PASS" starttime="20220924 09:45:45.029" endtime="20220924 09:45:46.267"/>
 </suite>
 <statistics>
 <total>
-<stat pass="0" fail="1" skip="0">All Tests</stat>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
 </total>
 <tag>
 </tag>
 <suite>
-<stat pass="0" fail="1" skip="0" id="s1" name="Sankhya Treinamento Robot Framework">Sankhya Treinamento Robot Framework</stat>
-<stat pass="0" fail="1" skip="0" id="s1-s1" name="Test">Sankhya Treinamento Robot Framework.Test</stat>
-<stat pass="0" fail="1" skip="0" id="s1-s1-s1" name="desafio POST">Sankhya Treinamento Robot Framework.Test.desafio POST</stat>
+<stat pass="1" fail="0" skip="0" id="s1" name="Sankhya Treinamento Robot Framework">Sankhya Treinamento Robot Framework</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s1" name="Test">Sankhya Treinamento Robot Framework.Test</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s1-s1" name="desafio GET">Sankhya Treinamento Robot Framework.Test.desafio GET</stat>
 </suite>
 </statistics>
 <errors>
